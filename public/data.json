@@ -1,0 +1,795 @@
+{
+  "categories": [
+    {
+      "id": "0",
+      "name": "Reggaeton"
+    },
+    {
+      "id": "1",
+      "name": "Trap"
+    },
+    {
+      "id": "2",
+      "name": "Rap"
+    }
+  ],
+  "artists": [
+    {
+      "id": "0",
+      "name": "Bad Bunny",
+      "image": "badBunny.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Mora",
+      "image": "mora.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Eladio Carrión",
+      "image": "eladioCarrion.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Myke Towers",
+      "image": "mykeTowers.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Maluma",
+      "image": "maluma.jpg"
+    }
+  ],
+  "albums": [
+    {
+      "id": "0",
+      "tittle": "EL ÚLTIMO TOUR DEL MUNDO",
+      "year": "2020",
+      "category": "0",
+      "artist": "0",
+      "image": "elUltimoTourDelMundo.jpg"
+    },
+    {
+      "id": "1",
+      "tittle": "MICRODOSIS",
+      "year": "2022",
+      "category": "0",
+      "artist": "1",
+      "image": "microdosis.jpg"
+    },
+    {
+      "id": "2",
+      "tittle": "Sen2 Kbrn",
+      "year": "2021",
+      "category": "1",
+      "artist": "3",
+      "image": "sen2Kbrn.jpg"
+    },
+    {
+      "id": "3",
+      "tittle": "Para Mi Ex",
+      "year": "2020",
+      "category": "2",
+      "artist": "3",
+      "image": "paraMiEx.jpg"
+    },
+    {
+      "id": "4",
+      "tittle": "The Love  Sex Tape",
+      "year": "2022",
+      "category": "0",
+      "artist": "4",
+      "image": "theLoveSexTape.jpg"
+    },
+    {
+      "id": "5",
+      "tittle": "Un Verano Sin Ti",
+      "year": "2022",
+      "category": "0",
+      "artist": "0",
+      "image": "unVeranoSinTi.jpg"
+    }
+  ],
+  "songs": [
+    {
+      "id": "0",
+      "title": "EL MUNDO ES MÍO",
+      "duration": "165",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/elMundoEsMio.mp3"
+    },
+    {
+      "id": "1",
+      "title": "TE MUDASTE",
+      "duration": "130",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/teMudastes.mp3"
+    },
+    {
+      "id": "2",
+      "title": "HOY COBRÉ",
+      "duration": "162",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/hoyCobre.mp3"
+    },
+    {
+      "id": "3",
+      "title": "MALDITA POBREZA",
+      "duration": "213",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/malditaPobreza.mp3"
+    },
+    {
+      "id": "4",
+      "title": "LA NOCHE DE ANOCHE",
+      "duration": "203",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/laNocheDeAnoche.mp3"
+    },
+    {
+      "id": "5",
+      "title": "TE DESEO LO MEJOR",
+      "duration": "139",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/teDeseoLoMejor.mp3"
+    },
+    {
+      "id": "6",
+      "title": "YO VISTO ASÍ",
+      "duration": "191",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/yoVistoAsi.mp3"
+    },
+    {
+      "id": "7",
+      "title": "HACIENDO QUE ME AMAS",
+      "duration": "217",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/haciendoQueMeAmas.mp3"
+    },
+    {
+      "id": "8",
+      "title": "BOOKER T",
+      "duration": "156",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/bookerT.mp3"
+    },
+    {
+      "id": "9",
+      "title": "LA DROGA",
+      "duration": "162",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/laDroga.mp3"
+    },
+    {
+      "id": "10",
+      "title": "DÁKITI",
+      "duration": "138",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/dakiti.mp3"
+    },
+    {
+      "id": "11",
+      "title": "TRELLAS",
+      "duration": "157",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/trellas.mp3"
+    },
+    {
+      "id": "12",
+      "title": "SORRY PAPI",
+      "duration": "163",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/sorryPapi.mp3"
+    },
+    {
+      "id": "13",
+      "title": "119",
+      "duration": "152",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/120.mp3"
+    },
+    {
+      "id": "14",
+      "title": "ANTES QUE SE ACABE",
+      "duration": "221",
+      "category": "0",
+      "album": "0",
+      "artist": "0",
+      "views": "1000",
+      "src": "elUltimoTourDelMundo/antesQueSeAcabe.mp3"
+    },
+    {
+      "id": "16",
+      "title": "badtrip :(",
+      "duration": "192",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/badTrip.mp3"
+    },
+    {
+      "id": "17",
+      "title": "2010",
+      "duration": "172",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/2010.mp3"
+    },
+    {
+      "id": "18",
+      "title": "MEMORIAS",
+      "duration": "229",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/memorias.mp3"
+    },
+    {
+      "id": "19",
+      "title": "ROBERT DE NIRO",
+      "duration": "175",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/robertDeNiro.mp3"
+    },
+    {
+      "id": "20",
+      "title": "PECADO",
+      "duration": "172",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/pecado.mp3"
+    },
+    {
+      "id": "21",
+      "title": "LINDOR",
+      "duration": "145",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/lindor.mp3"
+    },
+    {
+      "id": "22",
+      "title": "TUS LÁGRIMAS",
+      "duration": "175",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/tusLagrimas.mp3"
+    },
+    {
+      "id": "23",
+      "title": "ESCALOFRÍOS",
+      "duration": "139",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/escalofrios.mp3"
+    },
+    {
+      "id": "24",
+      "title": "PLAYA PRIVADA",
+      "duration": "158",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/playaPrivada.mp3"
+    },
+    {
+      "id": "25",
+      "title": "LEJOS DE TI",
+      "duration": "129",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/lejosDeTi.mp3"
+    },
+    {
+      "id": "26",
+      "title": "QSY",
+      "duration": "220",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/qsy.mp3"
+    },
+    {
+      "id": "27",
+      "title": "TU AMIGO",
+      "duration": "174",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/tuAmigo.mp3"
+    },
+    {
+      "id": "28",
+      "title": "ORO ROSADO",
+      "duration": "155",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/oroRosado.mp3"
+    },
+    {
+      "id": "29",
+      "title": "LA INOCENTE",
+      "duration": "203",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/laInocente.mp3"
+    },
+    {
+      "id": "30",
+      "title": "OJOS COLORAU",
+      "duration": "222",
+      "category": "0",
+      "album": "1",
+      "artist": "1",
+      "views": "1000",
+      "src": "microdosis/ojosColorau.mp3"
+    },
+    {
+      "id": "31",
+      "title": "5 Star",
+      "duration": "152",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/5Star.mp3"
+    },
+    {
+      "id": "32",
+      "title": "Guerrero",
+      "duration": "176",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/guerrero.mp3"
+    },
+    {
+      "id": "33",
+      "title": "La H",
+      "duration": "123",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/laH.mp3"
+    },
+    {
+      "id": "34",
+      "title": "La Novena",
+      "duration": "137",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/laNovena.mp3"
+    },
+    {
+      "id": "35",
+      "title": "Midas",
+      "duration": "124",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/midas.mp3"
+    },
+    {
+      "id": "36",
+      "title": "Paz Mental",
+      "duration": "150",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/pazMental.mp3"
+    },
+    {
+      "id": "37",
+      "title": "Problema",
+      "duration": "173",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/problema.mp3"
+    },
+    {
+      "id": "38",
+      "title": "Sauce Boy Freestyle 4",
+      "duration": "117",
+      "category": "1",
+      "album": "2",
+      "artist": "2",
+      "views": "1000",
+      "src": "sen2Kbron/sauceBoyFreestyle4.mp3"
+    },
+    {
+      "id": "39",
+      "title": "Mi Ex",
+      "duration": "187",
+      "category": "2",
+      "album": "3",
+      "artist": "3",
+      "views": "1000",
+      "src": "paraMiEx/miEx.mp3"
+    },
+    {
+      "id": "40",
+      "title": "Explícito",
+      "duration": "195",
+      "category": "2",
+      "album": "3",
+      "artist": "3",
+      "views": "1000",
+      "src": "paraMiEx/explicito.mp3"
+    },
+    {
+      "id": "41",
+      "title": "Extasy",
+      "duration": "187",
+      "category": "2",
+      "album": "3",
+      "artist": "3",
+      "views": "1000",
+      "src": "paraMiEx/extasy.mp3"
+    },
+    {
+      "id": "42",
+      "title": "Bandido",
+      "duration": "232",
+      "category": "2",
+      "album": "3",
+      "artist": "3",
+      "views": "1000",
+      "src": "paraMiEx/bandido.mp3"
+    },
+    {
+      "id": "43",
+      "title": "Happy Birthday",
+      "duration": "198",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/happyBirthday.mp3"
+    },
+    {
+      "id": "44",
+      "title": "Mal de Amores",
+      "duration": "226",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/malDeAmores.mp3"
+    },
+    {
+      "id": "45",
+      "title": "La vida es Bella",
+      "duration": "159",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/laVidaEsBella.mp3"
+    },
+    {
+      "id": "46",
+      "title": "Tsunami",
+      "duration": "242",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/tsunami.mp3"
+    },
+    {
+      "id": "47",
+      "title": "Nos Comemos Vivos",
+      "duration": "225",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/nosComemosVivos.mp3"
+    },
+    {
+      "id": "48",
+      "title": "Sexo Sin Titulo",
+      "duration": "198",
+      "category": "0",
+      "album": "4",
+      "artist": "4",
+      "views": "1000",
+      "src": "theLoveSexTape/sexoSinTitulo.mp3"
+    },
+    {
+      "id": "49",
+      "title": "Agosto",
+      "duration": "139",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/agosto.mp3"
+    },
+    {
+      "id": "50",
+      "title": "Aguacero",
+      "duration": "211",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/aguacero.mp3"
+    },
+    {
+      "id": "51",
+      "title": "Andrea",
+      "duration": "339",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/andrea.mp3"
+    },
+    {
+      "id": "52",
+      "title": "Despues de la playa",
+      "duration": "230",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/despuesDeLaPlaya.mp3"
+    },
+    {
+      "id": "53",
+      "title": "Dos Mil 16",
+      "duration": "208",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/dosMil16.mp3"
+    },
+    {
+      "id": "54",
+      "title": "Efecto",
+      "duration": "213",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/efecto.mp3"
+    },
+    {
+      "id": "55",
+      "title": "El Apagon",
+      "duration": "201",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/elApagon.mp3"
+    },
+    {
+      "id": "56",
+      "title": "Enseñame a Bailar",
+      "duration": "176",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/ensenameABailar.mp3"
+    },
+    {
+      "id": "57",
+      "title": "La Corriente",
+      "duration": "198",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/laCorriente.mp3"
+    },
+    {
+      "id": "58",
+      "title": "Me fuy de Vacaciones",
+      "duration": "181",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/meFuiDeVacaciones.mp3"
+    },
+    {
+      "id": "59",
+      "title": "Me Porto Bonito",
+      "duration": "238",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/mePortoBonito.mp3"
+    },
+    {
+      "id": "60",
+      "title": "Moscow Mule",
+      "duration": "246",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/moscowMule.mp3"
+    },
+    {
+      "id": "61",
+      "title": "Neverita",
+      "duration": "173",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/neverita.mp3"
+    },
+    {
+      "id": "62",
+      "title": "Ojitos Lindos",
+      "duration": "258",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/ojitosLindos.mp3"
+    },
+    {
+      "id": "63",
+      "title": "Otro Atardecer",
+      "duration": "244",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/otroAtardecer.mp3"
+    },
+    {
+      "id": "64",
+      "title": "Party",
+      "duration": "227",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/party.mp3"
+    },
+    {
+      "id": "65",
+      "title": "Tarot",
+      "duration": "237",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/tarot.mp3"
+    },
+    {
+      "id": "66",
+      "title": "Titi me Pregunto",
+      "duration": "243",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/titiMePregunto.mp3"
+    },
+    {
+      "id": "67",
+      "title": "Un Coco",
+      "duration": "196",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/unCoco.mp3"
+    },
+    {
+      "id": "68",
+      "title": "Un Ratito",
+      "duration": "177",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/unRatito.mp3"
+    },
+    {
+      "id": "69",
+      "title": "Un Verano Sin Ti",
+      "duration": "148",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/unVeranoSinTi.mp3"
+    },
+    {
+      "id": "70",
+      "title": "Yo no Soy Celoso",
+      "duration": "230",
+      "category": "0",
+      "album": "5",
+      "artist": "0",
+      "views": "1000",
+      "src": "unVeranoSinTi/yoNoSoyCeloso.mp3"
+    }
+  ]
+}
