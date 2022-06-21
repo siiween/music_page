@@ -1,18 +1,17 @@
 import { setSong } from "../../../store/music/action";
 import { connect } from "react-redux";
 
-function reloadPlayer() {
-  var audio = document.getElementById("musicPlayer");
-  audio.load(); //call this to play the song right away
-}
-
-function SongPreview({ img, name, artist, duration, songUrl, setSong }) {
+function SongPreview({ img, name, artist, duration = 120, songUrl, setSong }) {
+  function reloadPlayer() {
+    var audio = document.getElementById("musicPlayer");
+    audio.load(); //call this to play the song right away
+  }
   // duration of the song in minutes and seconds
   const min = Math.trunc(duration / 60);
   let sec = duration % 60;
   if (sec <= 9) sec = "0" + sec;
   // url os the image
-  const imageSrc = "/albumImages/" + img;
+  const imageSrc = img.includes("/albumImages/") ? img : "/albumImages/" + img;
 
   return (
     <div

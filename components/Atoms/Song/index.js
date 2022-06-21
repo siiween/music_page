@@ -1,24 +1,44 @@
-import { setSong } from "../../../store/music/action";
+import { setSong, addFav } from "../../../store/music/action";
 import { connect } from "react-redux";
 
 const maspStateToProps = (state) => {
   return {
     song: state.musicReducer.song,
-    record: state.musicReducer.record,
+    favorites: state.musicReducer.favorites,
   };
 };
 
-function reloadPlayer() {
-  var audio = document.getElementById("musicPlayer");
-  audio.load(); //call this to play the song right away
-}
+function Song({
+  img,
+  name,
+  artist,
+  songUrl,
+  setSong,
+  song,
+  favorites,
+  addFav,
+}) {
+  function reloadPlayer() {
+    var audio = document.getElementById("musicPlayer");
+    audio.load(); //call this to play the song right away
+  }
 
-function Song({ img, name, artist, songUrl, setSong, song }) {
   const style = {
     border:
       name === song.name
         ? "2px solid rgb(157 23 77)"
         : "2px solid rgb(39 39 42)",
+  };
+
+  let isIn = false;
+  favorites.map(function (song) {
+    if (song.name === name) {
+      isIn = true;
+    }
+  });
+
+  const favoriteColor = {
+    color: isIn === true ? "rgb(220 38 38)" : "rgb(82 82 91)",
   };
 
   return (
@@ -39,7 +59,18 @@ function Song({ img, name, artist, songUrl, setSong, song }) {
           <p className="md:text-base text-sm w-max text-zinc-400 ">{artist}</p>
         </div>
         <p></p>
-        <p className="my-auto ml-6 text-2xl text-zinc-600 cursor-pointer hover:text-red-600">
+        <p
+          className="my-auto ml-6 text-2xl  cursor-pointer hover:text-red-600"
+          style={favoriteColor}
+          onClick={() => {
+            addFav({
+              name: name,
+              artist: artist,
+              url: songUrl,
+              image: img,
+            });
+          }}
+        >
           <span className="icon-heart "></span>
         </p>
       </div>
@@ -47,4 +78,4 @@ function Song({ img, name, artist, songUrl, setSong, song }) {
   );
 }
 
-export default connect(maspStateToProps, { setSong })(Song);
+export default connect(maspStateToProps, { setSong, addFav })(Song);

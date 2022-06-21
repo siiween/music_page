@@ -8,30 +8,33 @@ export default function Search() {
   const [showCategories, setShowCategories] = useState();
   const [showArtists, setShowArtists] = useState();
   const [showSongs, setShowSongs] = useState();
+  const [noResults, setNoResults] = useState();
 
   let categories = [],
     artists = [],
     songs = [],
-    query = "";
+    query = "",
+    result = [];
 
   async function pullJson() {
     if (query != "") {
       const response = await fetch(jsonUrl);
       const responseData = await response.json();
 
-      categories = responseData.categories.map(function (category) {
-        if (category.name.toLowerCase().includes(query.toLowerCase()))
-          return (
+      responseData.categories.map(function (category) {
+        if (category.name.toLowerCase().includes(query.toLowerCase())) {
+          categories.push(
             <CategoryPreview
               key={category.id}
               name={category.name}
             ></CategoryPreview>
           );
+        }
       });
 
-      artists = responseData.artists.map(function (artist) {
+      responseData.artists.map(function (artist) {
         if (artist.name.toLowerCase().includes(query.toLowerCase()))
-          return (
+          artists.push(
             <ArtistPreview
               key={artist.id}
               idArtist={artist.id}
@@ -41,7 +44,7 @@ export default function Search() {
           );
       });
 
-      songs = responseData.songs.map(function (song) {
+      responseData.songs.map(function (song) {
         if (song.title.toLowerCase().includes(query.toLowerCase())) {
           const image = responseData.albums.find(
             (el) => el.id == song.album
@@ -51,7 +54,7 @@ export default function Search() {
             (el) => el.id == song.artist
           ).name;
 
-          return (
+          songs.push(
             <SongPreview
               key={song.id}
               img={image}
@@ -69,16 +72,40 @@ export default function Search() {
       songs = [];
     }
 
+    if (categories == "" && artists == "" && songs == "") {
+      result = (
+        <div className="lg:w-2/5 w-3/5 mx-auto py-6">
+          <h1 className="text-2xl md:text-3xl mb-2 font-bold text-center">
+            No results found
+          </h1>
+          <h2 className="text-zinc-500 text-xl text-center lg:mb-12 mb-6">
+            Try other keywords
+          </h2>
+          <img
+            src="img/noResults2.svg"
+            className="w-full"
+            alt="No results"
+          ></img>
+        </div>
+      );
+    } else {
+      result = [];
+    }
+
     setShowCategories(categories);
     setShowArtists(artists);
     setShowSongs(songs);
+    setNoResults(result);
   }
 
   const handleChange = (e) => {
     query = e.target.value;
     pullJson();
   };
-  useEffect(() => {});
+
+  useEffect(() => {
+    pullJson();
+  }, []);
 
   return (
     <div className="md:p-8 p-3">
@@ -93,6 +120,8 @@ export default function Search() {
           <span className="icon-search"></span>
         </div>
       </div>
+
+      {noResults}
 
       <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
         {showCategories}

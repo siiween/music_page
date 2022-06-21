@@ -14,6 +14,14 @@ const initialState = {
     },
   ],
   position: 0,
+  favorites: [
+    {
+      name: "badtrip :(",
+      artist: "Mora",
+      src: "/songs/microdosis/badTrip.mp3",
+      image: "/albumImages/microdosis.jpg",
+    },
+  ],
 };
 
 export default (state = initialState, action) => {
@@ -53,23 +61,50 @@ export default (state = initialState, action) => {
       };
 
     case "PREVIOUS_SONG":
-      const positionPreviusSong = state.position == 0 ? 0 : state.position - 1;
-      state.position == 0 ? 0 : state.position--;
-      return {
-        ...state,
-        song: state.record[positionPreviusSong],
-      };
-
-    case "NEXT_SONG":
-      if (state.position != state.record.length - 1) {
-        state.position++;
-      }
-
+      if (state.position != 0) state.position--;
       return {
         ...state,
         song: state.record[state.position],
       };
 
+    case "NEXT_SONG":
+      if (state.position != state.record.length - 1) state.position++;
+      return {
+        ...state,
+        song: state.record[state.position],
+      };
+
+    case "ADD_FAVORITE":
+      const favSong = {
+        name: action.song.name,
+        artist: action.song.artist,
+        image: action.song.image,
+        src: action.song.image,
+      };
+
+      let existsFavorite = false;
+      let counter = 0;
+
+      state.favorites.find((object) => {
+        if (object.name == favSong.name) {
+          existsFavorite = true;
+          state.favorites.splice(counter, counter + 1);
+          console.log(counter);
+        }
+        counter++;
+      });
+
+      if (!existsFavorite) {
+        state.favorites.push(favSong);
+      } else {
+      }
+
+      console.log(state.favorites);
+      return {
+        ...state,
+        song: favSong,
+        favorites: state.favorites,
+      };
     default:
       return state;
   }

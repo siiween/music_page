@@ -2,12 +2,33 @@ import SongPreview from "../components/Molecules/SongPreview";
 import ArtistPreview from "../components/Molecules/ArtistPreview";
 import CategoryPreview from "../components/Atoms/CategoryPreview";
 import { useEffect, useState } from "react";
+let numberOfSongs = 15;
+let categories, artists, songs;
+let showButton = {
+  display: "inline",
+};
+
 export default function Home() {
   const jsonUrl = "/data.json";
-  const [showCategories, setShowCategories] = useState();
-  const [showArtists, setShowArtists] = useState();
-  const [showSongs, setShowSongs] = useState();
-  let categories, artists, songs;
+  const [showCategories, setShowCategories] = useState([]);
+  const [showArtists, setShowArtists] = useState([]);
+  const [showSongs, setShowSongs] = useState([]);
+
+  function shuffle(arr) {
+    var i, j, temp;
+    for (i = arr.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+    return arr;
+  }
+
+  async function moreSongs() {
+    numberOfSongs += 15;
+    pullJson();
+  }
 
   async function pullJson() {
     const response = await fetch(jsonUrl);
@@ -52,9 +73,13 @@ export default function Home() {
       );
     });
 
+    showButton = {
+      display: numberOfSongs >= songs.length ? "none" : "inline",
+    };
+
     setShowCategories(categories);
     setShowArtists(artists);
-    setShowSongs(songs);
+    setShowSongs(songs.slice(0, numberOfSongs));
   }
 
   useEffect(() => {
@@ -79,7 +104,11 @@ export default function Home() {
       </div>
 
       <div className="w-full text-center mt-12">
-        <button className="px-5 py-3 bg-pink-700 hover:bg-pink-800">
+        <button
+          style={showButton}
+          className="px-5 py-3 bg-pink-700 hover:bg-pink-800"
+          onClick={() => moreSongs()}
+        >
           More Songs
         </button>
       </div>

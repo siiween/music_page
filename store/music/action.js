@@ -24,4 +24,4 @@ const addFav = (song) => {
   };
 };
 
-export { setSong, previousSong, nextSong };
+export { setSong, previousSong, nextSong, addFav };

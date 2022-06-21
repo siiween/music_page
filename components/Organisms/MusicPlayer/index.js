@@ -1,18 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
-import { previousSong, nextSong } from "../../../store/music/action";
+import { previousSong, nextSong, addFav } from "../../../store/music/action";
 import SongsLists from "../../Molecules/SongsList";
 import { connect } from "react-redux";
 const maspStateToProps = (state) => {
   return {
     song: state.musicReducer.song,
+    favorites: state.musicReducer.favorites,
   };
 };
 
-function MusicPlayer({ song, previousSong, nextSong }) {
+function MusicPlayer({ song, previousSong, nextSong, favorites, addFav }) {
   function reloadPlayer() {
     var audio = document.getElementById("musicPlayer");
     audio.load(); //call this to just preload the audio without playing
   }
+
+  let isIn = false;
+  favorites.map(function (fav) {
+    if (fav.name === song.name) {
+      isIn = true;
+    }
+  });
+
+  const favoriteColor = {
+    color: isIn === true ? "rgb(220 38 38)" : "rgb(82 82 91)",
+  };
 
   return (
     <>
@@ -32,7 +44,18 @@ function MusicPlayer({ song, previousSong, nextSong }) {
           </p>
         </div>
 
-        <p className="my-auto ml-6 text-2xl text-zinc-600 cursor-pointer hover:text-red-600 md:inline hidden">
+        <p
+          className="my-auto ml-6 text-2xl cursor-pointer hover:text-red-600 md:inline hidden"
+          style={favoriteColor}
+          onClick={() => {
+            addFav({
+              name: song.name,
+              artist: song.artist,
+              url: song.src,
+              image: song.image,
+            });
+          }}
+        >
           <span className="icon-heart "></span>
         </p>
 
@@ -47,9 +70,9 @@ function MusicPlayer({ song, previousSong, nextSong }) {
           Your browser does not support the audio element.
         </audio>
 
-        <p className="text-2xl md:text-3xl my-auto ml-3 mr-12">
+        <p className="text-2xl md:text-3xl my-auto ml-3 md:mr-12 mr-8">
           <span
-            className="icon-previous mr-4 text-zinc-600 cursor-pointer hover:text-white"
+            className="icon-previous md:mr-4 mr-2 text-zinc-600 cursor-pointer hover:text-white"
             onClick={() => {
               previousSong(), reloadPlayer();
             }}
@@ -66,6 +89,8 @@ function MusicPlayer({ song, previousSong, nextSong }) {
   );
 }
 
-export default connect(maspStateToProps, { nextSong, previousSong })(
-  MusicPlayer
-);
+export default connect(maspStateToProps, {
+  nextSong,
+  previousSong,
+  addFav,
+})(MusicPlayer);
