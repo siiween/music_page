@@ -74,8 +74,14 @@ export default function Home() {
         {showArtists}
       </div>
       <h1 className="text-2xl md:text-4xl mb-5 mt-12 font-bold">Top Songs</h1>
-      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4">
+      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-6">
         {showSongs}
+      </div>
+
+      <div className="w-full text-center mt-12">
+        <button className="px-5 py-3 bg-pink-700 hover:bg-pink-800">
+          More Songs
+        </button>
       </div>
     </div>
   );

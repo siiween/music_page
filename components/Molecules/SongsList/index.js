@@ -1,17 +1,12 @@
 import { connect } from "react-redux";
 import Song from "../../Atoms/Song";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const maspStateToProps = (state) => {
   return {
     record: state.musicReducer.record,
   };
 };
-
-function closeList() {
-  var list = document.getElementById("songsList");
-  list.style.display = "none";
-}
 
 function SongsLists({ record }) {
   const [showSongs, setShowSongs] = useState([]);
@@ -30,28 +25,71 @@ function SongsLists({ record }) {
         ></Song>
       );
     });
-    setShowSongs(songs);
+    setShowSongs(songs.reverse());
   }
-  useEffect(() => {
-    console.log(record);
+
+  function closeList() {
+    var list = document.getElementById("songsList");
+    list.classList.remove("active");
+  }
+
+  function openList() {
     pullSongs();
-  }, [record]);
+    var list = document.getElementById("songsList");
+    list.classList.add("active");
+  }
 
   return (
     <>
       <div
-        className="w-full fixed bg-neutral-900 z-10 h-3/5 md:bottom-24 bottom-16 left-0 overflow-y-scroll text-white lg:p-12 p-4  hidden"
+        className="fixed bottom-5 md:bottom-8 z-30 right-3 md:right-5"
+        onClick={() => openList()}
+      >
+        <span
+          className="icon-list2 text-xl md:text-3xl text-zinc-600 cursor-pointer hover:text-white"
+          onClick={() => openList()}
+        ></span>
+      </div>
+
+      <div
+        className="songsListDiv fixed bg-black z-10 overflow-y-scroll text-white lg:p-12 p-4"
         id="songsList"
       >
         <p
           onClick={() => closeList()}
-          className="text-2xl mb-5 text-right cursor-pointer text-zinc-400 hover:text-white"
+          className="text-3xl mb-5 text-right cursor-pointer text-zinc-400 hover:text-white"
         >
           <span className="icon-cancel-circle"></span>
         </p>
         <h1 className="text-2xl md:text-4xl mb-5 font-bold">Songs on hold</h1>
         {showSongs}
       </div>
+
+      <style jsx>{`
+        .songsListDiv {
+          height: calc(100vh - 96px);
+          right: 0;
+          bottom: -100vh;
+          width: calc(100vw - 18rem);
+          transition: 1s;
+        }
+
+        .songsListDiv.active {
+          bottom: 96px;
+          transition: 1s;
+        }
+
+        @media (max-width: 768px) {
+          .songsListDiv.active {
+            bottom: 64px;
+            transition: 1s;
+          }
+          .songsListDiv {
+            height: calc(100% - 64px);
+            width: calc(100%);
+          }
+        }
+      `}</style>
     </>
   );
 }

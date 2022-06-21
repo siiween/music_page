@@ -100,7 +100,7 @@ export default function Search() {
       <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
         {showArtists}
       </div>
-      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4">
+      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2  gap-6">
         {showSongs}
       </div>
     </div>

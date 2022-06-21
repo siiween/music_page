@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 
 function reloadPlayer() {
   var audio = document.getElementById("musicPlayer");
-  audio.load(); //call this to just preload the audio without playing
-  audio.play(); //call this to play the song right away
+  audio.load(); //call this to play the song right away
 }
 
 function SongPreview({ img, name, artist, duration, songUrl, setSong }) {

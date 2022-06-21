@@ -28,7 +28,7 @@ export default function Artist() {
           <div className="w-full h-auto relative ">
             <img src={newImage} className="w-full h-auto "></img>
             <div className="w-full h-full top-0 left-0 absolute gradiente"></div>
-            <h1 className="text-2xl md:text-4xl font-bold absolute bottom-14 left-10 drop-shadow-lg">
+            <h1 className="text-3xl md:text-4xl font-bold absolute md:bottom-14 bottom-10 md:left-10 left-4 drop-shadow-lg">
               {name}
             </h1>
           </div>
@@ -71,10 +71,10 @@ export default function Artist() {
     <>
       {showArtist}
       <div className="md:p-8 p-3">
-        <h1 className="text-xl md:text-2xl font-semibold">
+        <h1 className="text-xl md:text-2xl font-semibold mb-6">
           Top songs of {name}
         </h1>
-        <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4">
+        <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2  gap-6">
           {showSongs}
         </div>
       </div>

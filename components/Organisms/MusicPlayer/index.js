@@ -8,21 +8,16 @@ const maspStateToProps = (state) => {
   };
 };
 
-function reloadPlayer() {
-  var audio = document.getElementById("musicPlayer");
-  audio.load(); //call this to just preload the audio without playing
-}
-function songsList() {
-  var list = document.getElementById("songsList");
-  if (list.style.display == "block") list.style.display = "none";
-  else list.style.display = "block";
-}
-
 function MusicPlayer({ song, previousSong, nextSong }) {
+  function reloadPlayer() {
+    var audio = document.getElementById("musicPlayer");
+    audio.load(); //call this to just preload the audio without playing
+  }
+
   return (
     <>
       <SongsLists></SongsLists>
-      <div className="w-full md:h-24 h-16 bg-neutral-900 fixed bottom-0 left-0 flex justify-center md:p-5 p-3">
+      <div className="w-full z-20 md:h-24 h-16 bg-neutral-900 fixed bottom-0 left-0 flex justify-center md:p-5 p-3">
         <img
           src={song.image}
           alt={song.name}
@@ -52,7 +47,7 @@ function MusicPlayer({ song, previousSong, nextSong }) {
           Your browser does not support the audio element.
         </audio>
 
-        <p className="text-xl md:text-2xl my-auto md:inline hidden">
+        <p className="text-2xl md:text-3xl my-auto ml-3 mr-12">
           <span
             className="icon-previous mr-4 text-zinc-600 cursor-pointer hover:text-white"
             onClick={() => {
@@ -64,12 +59,6 @@ function MusicPlayer({ song, previousSong, nextSong }) {
             onClick={() => {
               nextSong(), reloadPlayer();
             }}
-          ></span>
-        </p>
-        <p className="text-2xl my-auto ">
-          <span
-            className="icon-list2 text-xl md:ml-8 ml-3 text-zinc-600 cursor-pointer hover:text-white"
-            onClick={() => songsList()}
           ></span>
         </p>
       </div>

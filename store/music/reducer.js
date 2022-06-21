@@ -5,7 +5,6 @@ const initialState = {
     src: "/songs/microdosis/badTrip.mp3",
     image: "/albumImages/microdosis.jpg",
   },
-  position: 0,
   record: [
     {
       name: "badtrip :(",
@@ -14,9 +13,9 @@ const initialState = {
       image: "/albumImages/microdosis.jpg",
     },
   ],
+  position: 0,
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
   switch (action.type) {
     case "SET_SONG":
@@ -35,21 +34,22 @@ export default (state = initialState, action) => {
       };
 
       let exists = false;
+
       state.record.find((object) => {
         if (object.name === newSong.name) {
           exists = true;
         }
       });
 
-      state.position++;
-
       if (!exists) {
+        state.position++;
         state.record.splice(state.position, 0, newSong);
       }
 
       return {
         ...state,
         song: newSong,
+        record: state.record,
       };
 
     case "PREVIOUS_SONG":
@@ -61,20 +61,13 @@ export default (state = initialState, action) => {
       };
 
     case "NEXT_SONG":
-      const positionNextSong =
-        state.position == state.record.length - 1
-          ? state.position
-          : state.position + 1;
+      if (state.position != state.record.length - 1) {
+        state.position++;
+      }
 
-      state.position == state.record.length - 1
-        ? state.position
-        : state.position++;
-
-      console.log(state.position);
-      console.log(state.record);
       return {
         ...state,
-        song: state.record[positionNextSong],
+        song: state.record[state.position],
       };
 
     default:

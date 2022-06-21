@@ -10,19 +10,21 @@ const maspStateToProps = (state) => {
 
 function reloadPlayer() {
   var audio = document.getElementById("musicPlayer");
-  audio.load(); //call this to just preload the audio without playing
-  audio.play(); //call this to play the song right away
+  audio.load(); //call this to play the song right away
 }
 
 function Song({ img, name, artist, songUrl, setSong, song }) {
   const style = {
-    background: name === song.name ? "rgb(157 23 77)" : "rgb(39 39 42)",
+    border:
+      name === song.name
+        ? "2px solid rgb(157 23 77)"
+        : "2px solid rgb(39 39 42)",
   };
 
   return (
     <>
       <div
-        className="bg-neutral-800 px-6 py-4 mb-5 flex justify-start hover:bg-zinc-800 cursor-pointer"
+        className="bg-neutral-800 rounded px-6 py-4 mb-5 flex justify-start hover:bg-zinc-800 cursor-pointer"
         style={style}
         onClick={() => {
           setSong({ name: name, artist: artist, url: songUrl, image: img }),
