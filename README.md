@@ -20,3 +20,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+
+## Reomendations
+
+The audio tag is designed by each different browser so if you want to have the best possible experience use firefox, but chrome is also very nice :)
+
+
+## Possible next features
+
+- Light and Dark mode (I`m a big fan of the possibility of switch your web color and with the "dark:" tag of tailwind is very easy to make)
+- PlayList (Bring the users the possibility of making their own PlayList)
+- Albums (Filter the songs by albums)
+- Views (Add the songs views and then filter them by that or make PlayList with that information )
+
