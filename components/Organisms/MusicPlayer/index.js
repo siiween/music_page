@@ -45,7 +45,7 @@ function MusicPlayer({ song, previousSong, nextSong, favorites, addFav }) {
         </div>
 
         <p
-          className="my-auto ml-6 text-2xl cursor-pointer hover:text-red-600 md:inline hidden"
+          className="my-auto md:ml-6 md:text-2xl text-xl cursor-pointer hover:text-red-600 "
           style={favoriteColor}
           onClick={() => {
             addFav({
@@ -63,14 +63,14 @@ function MusicPlayer({ song, previousSong, nextSong, favorites, addFav }) {
           controls
           autoPlay
           loop
-          className="md:mx-6 mx-0 w-full h-full my-auto"
+          className="md:mx-6 mx-2 w-full md:h-12 h-8 my-auto"
           id="musicPlayer"
         >
           <source src={song.src} type="audio/mp3"></source>
           Your browser does not support the audio element.
         </audio>
 
-        <p className="text-2xl md:text-3xl my-auto ml-3 md:mr-12 mr-8">
+        <p className="text-2xl md:text-3xl my-auto  md:mr-12 mr-8">
           <span
             className="icon-previous md:mr-4 mr-2 text-zinc-600 cursor-pointer hover:text-white"
             onClick={() => {

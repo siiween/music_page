@@ -31,3 +31,12 @@ select:focus {
   outline: 0 !important;
   box-shadow: 0 0 0 0 !important;
 }
+
+
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 5px;
+}
