@@ -25,7 +25,7 @@ export default function Category() {
 
         const artist = responseData.artists.find(
           (el) => el.id == song.artist
-        ).image;
+        ).name;
 
         songs.push(
           <SongPreview
