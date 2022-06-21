@@ -89,7 +89,6 @@ export default (state = initialState, action) => {
         if (object.name == favSong.name) {
           existsFavorite = true;
           state.favorites.splice(counter, counter + 1);
-          console.log(counter);
         }
         counter++;
       });
@@ -99,7 +98,6 @@ export default (state = initialState, action) => {
       } else {
       }
 
-      console.log(state.favorites);
       return {
         ...state,
         song: favSong,

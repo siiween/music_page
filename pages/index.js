@@ -1,5 +1,5 @@
 import SongPreview from "../components/Molecules/SongPreview";
-import ArtistPreview from "../components/Molecules/ArtistPreview";
+import ArtistPreview from "../components/Atoms/ArtistPreview";
 import CategoryPreview from "../components/Atoms/CategoryPreview";
 import { useEffect, useState } from "react";
 let numberOfSongs = 15;

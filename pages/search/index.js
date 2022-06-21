@@ -1,5 +1,5 @@
 import SongPreview from "../../components/Molecules/SongPreview";
-import ArtistPreview from "../../components/Molecules/ArtistPreview";
+import ArtistPreview from "../../components/Atoms/artistPreview";
 import CategoryPreview from "../../components/Atoms/CategoryPreview";
 import { useEffect, useState } from "react";
 
@@ -66,30 +66,43 @@ export default function Search() {
           );
         }
       });
+
+      if (categories == "" && artists == "" && songs == "") {
+        result = (
+          <div className="lg:w-2/5 w-3/5 mx-auto py-6">
+            <h1 className="text-2xl md:text-3xl mb-2 font-bold text-center">
+              No results found
+            </h1>
+            <h2 className="text-zinc-500 text-xl text-center lg:mb-12 mb-6">
+              Try other keywords
+            </h2>
+            <img
+              src="img/noResults2.svg"
+              className="w-full"
+              alt="No results"
+            ></img>
+          </div>
+        );
+      }
     } else {
       categories = [];
       artists = [];
       songs = [];
-    }
-
-    if (categories == "" && artists == "" && songs == "") {
       result = (
         <div className="lg:w-2/5 w-3/5 mx-auto py-6">
           <h1 className="text-2xl md:text-3xl mb-2 font-bold text-center">
-            No results found
+            You haven't written anything yet
           </h1>
           <h2 className="text-zinc-500 text-xl text-center lg:mb-12 mb-6">
-            Try other keywords
+            what are you waiting for?
           </h2>
           <img
-            src="img/noResults2.svg"
+            src="img/noResults.svg"
             className="w-full"
             alt="No results"
           ></img>
         </div>
       );
-    } else {
-      result = [];
     }
 
     setShowCategories(categories);
@@ -123,15 +136,42 @@ export default function Search() {
 
       {noResults}
 
-      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
-        {showCategories}
-      </div>
-      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
-        {showArtists}
-      </div>
-      <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2  gap-6">
-        {showSongs}
-      </div>
+      {showCategories != "" ? (
+        <>
+          <h1 className="text-2xl md:text-4xl mb-5  mt-12 font-bold">
+            Categories
+          </h1>
+          <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
+            {showCategories}
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+
+      {showArtists != "" ? (
+        <>
+          <h1 className="text-2xl md:text-4xl mb-5  mt-12 font-bold">
+            Artists
+          </h1>
+          <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-5 gap-4 mb-5">
+            {showArtists}
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+
+      {showSongs != "" ? (
+        <>
+          <h1 className="text-2xl md:text-4xl mb-5  mt-12 font-bold">Songs</h1>
+          <div className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2  gap-6">
+            {showSongs}
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

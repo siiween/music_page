@@ -22,7 +22,7 @@ export default function DefaultLayout({ children }) {
           height: calc(100vh - 96px);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
           .mainContainer {
             height: auto;
             padding-bottom: 64px;

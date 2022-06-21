@@ -4,7 +4,7 @@ export default function ArtistPreview({ img, name, idArtist }) {
   const imageSrc = "artistImages/" + img;
 
   return (
-    <Link href="/artist/[name]" as={`/artist/${name}`}>
+    <Link href={`/artist/${name}`}>
       <a>
         <div className="w-full md:p-4 p-2 hover:bg-zinc-900 rounded-lg cursor-pointer">
           <img src={imageSrc} alt={name} className="rounded mb-2 md:mb-3"></img>
