@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Recomendations
 
-- The audio tag is designed by each different browser so if you want to have the best possible experience use firefox, but chrome is also very nice :)
+- The audio tag is designed by each different browser so if you want to have the best possible experience use firefox, but chrome is also very nice and also faster :)
 - There are like 70 songs and they have a size o 500mb more or less.
 
 
