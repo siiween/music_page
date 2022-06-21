@@ -1,5 +1,5 @@
 import SongPreview from "../../components/Molecules/SongPreview";
-import ArtistPreview from "../../components/Atoms/artistPreview";
+import ArtistPreview from "../../components/Atoms/ArtistPreview";
 import CategoryPreview from "../../components/Atoms/CategoryPreview";
 import { useEffect, useState } from "react";
 

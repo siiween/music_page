@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function ArtistPreview({ img, name, idArtist }) {
+export default function ArtistPreview({ img, name }) {
   // url of the image
   const imageSrc = "artistImages/" + img;
 
